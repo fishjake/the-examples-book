@@ -1,0 +1,102 @@
+runtime:
+  cache_dir: ./.cache/antora
+
+site:
+  title: The Examples Book
+  url: https://the-examples-book.com
+  robots: allow
+  start_page: book:ROOT:introduction.adoc
+  keys:
+    google_analytics: 'G-8E17Z3P7JJ'
+
+ui:
+  bundle:
+    url: https://github.com/TheDataMine/tdm-antora/releases/latest/download/ui-bundle.zip
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+
+git:
+  ensure_git_suffix: false
+
+urls:
+  redirect_facility: netlify
+  html_extension_style: drop
+
+content:
+  sources:
+  - url: .
+    branches: HEAD
+    start_paths: book
+  - url: git@github.com:TheDataMine/internal
+    branches: main
+    start_paths: content
+  - url: .
+    branches: HEAD
+    start_paths: corporate-partners-appendix
+  - url: .
+    branches: HEAD
+    start_paths: university-partners-appendix
+  - url: .
+    branches: HEAD
+    start_paths: geospatial-appendix
+  - url: .
+    branches: HEAD
+    start_paths: think-summer-appendix
+  - url: .
+    branches: HEAD
+    start_paths: projects-appendix
+  - url: .
+    branches: HEAD
+    start_paths: matlab-appendix
+  - url: .
+    branches: HEAD
+    start_paths: data-visualization-appendix
+  - url: .
+    branches: HEAD
+    start_paths: time-series-appendix
+  - url: .
+    branches: HEAD
+    start_paths: nlp-appendix
+  - url: .
+    branches: HEAD
+    start_paths: kubernetes-appendix
+  - url: .
+    branches: HEAD
+    start_paths: data-science-book-list-appendix
+  - url: .
+    branches: HEAD
+    start_paths: prodigy-appendix
+  - url: .
+    branches: HEAD
+    start_paths: optimization-techniques-appendix
+  - url: .
+    branches: HEAD
+    start_paths: agile-training-appendix
+  - url: .
+    branches: HEAD
+    start_paths: data-science-theory-appendix
+  - url: .
+    branches: HEAD
+    start_paths: rcac-appendix
+  - url: .
+    branches: HEAD
+    start_paths: registration-appendix
+  - url: .
+    branches: HEAD
+    start_paths: personal-appendix
+
+asciidoc:
+  attributes:
+    page-component-order: '!home, *, asciidoclet, reveal.js-converter, epub3-converter, diagram-extension, about'
+    page-pagination: ''
+    experimental: ''
+    idprefix: '@'
+    idseparator: '-@'
+    table-caption: false
+    table-frame: 'none@'
+    table-grid: 'rows@'
+    example-caption: false
+    listing-caption: false
+    hide-uri-scheme: '@'
+    url-project: https://the-examples-book.com
+    url-org: https://github.com/TheDataMine
